@@ -1,0 +1,31 @@
+{
+  "name": "js-start",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js"
+  },
+  "devDependencies": {
+    "express": "^4.17.0",
+    "mongodb": "~4.12.0",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "express": "^4.17.0",
+    "mongoose": "^6.7.2"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksiKlimov/node-js-start.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksiKlimov/node-js-start/issues"
+  },
+  "homepage": "https://github.com/AleksiKlimov/node-js-start#readme",
+  "description": ""
+}
