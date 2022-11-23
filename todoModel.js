@@ -1,7 +1,6 @@
-import mongoose from 'mongoose';
+const  mongoose = require('mongoose');
+
 const { Schema, model } = mongoose;
-
-
 
 const todoScheme = new Schema({
   title: String,
@@ -9,4 +8,5 @@ const todoScheme = new Schema({
   id: String,
 });
 const Todo = model('Todo', todoScheme)
-export default Todo
+
+module.exports = Todo
