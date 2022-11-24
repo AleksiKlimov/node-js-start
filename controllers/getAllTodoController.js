@@ -4,7 +4,7 @@ const getAllTodos  = async (req, res)=> {
 const collection = req.app.locals.collection;
 
 try{
-const todos = await Todo.find({}).toArray();
+const todos = await Todo.find({});
 res.json(todos);
 }
 catch(err){

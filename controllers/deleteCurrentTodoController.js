@@ -1,13 +1,13 @@
-const objectId = require('mongodb')
+const objectId = require('mongodb');
+const Todo = require('../todoModel');
 
 const deleteCurrentTodo = async (req, res) => {
-const collection = req.app.locals.collection
-const id = new objectId.ObjectId(req.params.id);
+const id = new objectId.ObjectId(req.query._id);
 try{
-  const result = await collection.findOneAndDelete({_id: id});
-  const todo = result.value;
-    if(todo){ 
-      res.sendStatus(204)
+  const result = await Todo.findOneAndRemove({_id: id});
+    if(result){ 
+      res.json(result)
+      // res.sendStatus(204)
     } else {
       res.sendStatus(404)
     };
