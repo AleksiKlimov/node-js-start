@@ -1,9 +1,11 @@
+const Todo = require("../todoModel");
 
 const getAllTodos  = async (req, res)=> {
 const collection = req.app.locals.collection;
+
 try{
-const todos = await collection.find({}).toArray();
-res.send(todos);
+const todos = await Todo.find({}).toArray();
+res.json(todos);
 }
 catch(err){
 console.log(err);
