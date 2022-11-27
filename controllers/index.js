@@ -1,21 +1,20 @@
 
 const deleteCurrentTodo = require('./deleteCurrentTodoController');
-const getAllTodos = require('./getAllTodoController');
+const getAllTodos = require('./getTodosController');
 const createTodoElement = require('./createTodoController');
 const editStatusTodo = require('./editStatusTodoController');
-const getActiveTodos = require('./getActiveTodosController');
-const getCompletedTodos = require('./getCompletedTodoController');
 const editTodoTitle = require('./editTitleTodoController');
-const installAllTodoCompleted = require('./installCompletedController')
+const installAllTodoCompleted = require('./installAllCompletedsController')
+const deleteAllCompletedTodos = require('./deleteAllCompletedTodosController');
+
 const controllers = {
   deleteCurrentTodo,
   getAllTodos,
   createTodoElement,
   editStatusTodo,
-  getActiveTodos,
-  getCompletedTodos,
   editTodoTitle,
   installAllTodoCompleted,
+  deleteAllCompletedTodos,
 }
 
 module.exports = controllers;

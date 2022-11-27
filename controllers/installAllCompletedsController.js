@@ -1,12 +1,11 @@
 
 const Todo = require('../todoModel');
 
-const installAllTodoCompleted = async (req, res) =>{
-  try{
-    
-    await Todo.updateMany({}, {completed: true });
+const installAllTodoCompleted = async (req, res) => {
+  try {
+    await Todo.updateMany({}, { completed: true });
     res.sendStatus(204);
-  } catch(err){
+  } catch (err) {
     res.sendStatus(500);
   }
 }
