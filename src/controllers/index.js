@@ -2,8 +2,7 @@
 const deleteCurrentTodo = require('./deleteCurrentTodo');
 const getAllTodos = require('./getTodos');
 const createTodoElement = require('./createTodo');
-const editStatusTodo = require('./editStatusTodo');
-const editTodoTitle = require('./editTitleTodo');
+const editTodo = require('./editTodo');
 const installAllTodoCompleted = require('./installAllCompleted')
 const deleteAllCompletedTodos = require('./deleteAllCompletedTodos');
 
@@ -11,8 +10,7 @@ const controllers = {
   deleteCurrentTodo,
   getAllTodos,
   createTodoElement,
-  editStatusTodo,
-  editTodoTitle,
+  editTodo,
   installAllTodoCompleted,
   deleteAllCompletedTodos,
 }

@@ -1,4 +1,4 @@
-const Todo = require('../db/index');
+const { Todo } = require('../db/index');
 
 const deleteAllCompletedTodos = async (req, res) => {
     try {

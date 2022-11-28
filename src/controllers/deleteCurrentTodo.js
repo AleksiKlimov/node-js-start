@@ -1,9 +1,10 @@
 const { ObjectId } = require('mongodb');
-const Todo = require('../db/index');
+const { Todo } = require('../db/index');
 
 const deleteCurrentTodo = async (req, res) => {
   try {
-    const _id = new ObjectId(req.params.id);
+    const _id = req.params.todoId;
+    console.log(_id)
     await Todo.deleteOne({ _id });
     res.sendStatus(204);
   } catch (err) {

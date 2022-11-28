@@ -1,5 +1,5 @@
 
-const Todo = require('../db/index');
+const { Todo } = require('../db/index');
 
 const installAllTodosCompleted = async (req, res) => {
   try {

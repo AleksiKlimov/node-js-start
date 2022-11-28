@@ -1,7 +1,6 @@
-const Todo = require('../db/index');
+const { Todo } = require('../db/index');
 
 const getAllTodos = async (req, res) => {
-  console.log(req.query)
   try {
     const filter = req.query.filter;
     if (filter === 'all') {
