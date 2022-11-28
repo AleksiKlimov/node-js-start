@@ -1,7 +1,7 @@
 
-const Todo = require('../todoModel');
+const Todo = require('../db/index');
 
-const installAllTodoCompleted = async (req, res) => {
+const installAllTodosCompleted = async (req, res) => {
   try {
     await Todo.updateMany({}, { completed: true });
     res.sendStatus(204);
@@ -10,4 +10,4 @@ const installAllTodoCompleted = async (req, res) => {
   }
 }
 
-module.exports = installAllTodoCompleted;
+module.exports = installAllTodosCompleted;

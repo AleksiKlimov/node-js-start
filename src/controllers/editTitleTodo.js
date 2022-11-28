@@ -1,5 +1,5 @@
 const { ObjectId } = require("mongodb");
-const Todo = require("../todoModel");
+const Todo = require('../db/index');
 
 const editTodoTitle = async (req, res) => {
     try {

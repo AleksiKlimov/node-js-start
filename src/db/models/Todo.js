@@ -8,4 +8,4 @@ const todoScheme = new Schema({
 },{ versionKey: false });
 const Todo = model('Todo', todoScheme)
 
-module.exports = Todo
+module.exports = Todo;

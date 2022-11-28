@@ -1,4 +1,4 @@
-const Todo = require('../todoModel');
+const Todo = require('../db/index');
 
 const createTodoElement = async (req, res) => {
   try {
