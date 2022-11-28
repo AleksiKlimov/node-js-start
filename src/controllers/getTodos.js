@@ -1,8 +1,9 @@
 const Todo = require('../db/index');
 
 const getAllTodos = async (req, res) => {
+  console.log(req.query)
   try {
-    const filter = req.params.filter;
+    const filter = req.query.filter;
     if (filter === 'all') {
       const todos = await Todo.find();
       res.json(todos);
