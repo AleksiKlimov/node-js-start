@@ -1,16 +1,16 @@
 const express = require('express');
-const controllers = require('./controllers')
+const controllers = require('./controllers');
 
 const routes = express.Router();
 
-routes.post('/', controllers.createTodoElement)
+routes.post('/', controllers.createTodoElement);
 
 routes.get('/', controllers.getAllTodos);
 
-routes.patch('/completed', controllers.installAllTodoCompleted)
-routes.patch('/:todoId/', controllers.editTodo)
+routes.patch('/completed', controllers.changeAllTodosStatus);
+routes.patch('/:todoId/', controllers.updateTodo);
 
 routes.delete('/all', controllers.deleteAllCompletedTodos);
 routes.delete('/:todoId', controllers.deleteCurrentTodo);
 
-module.exports = routes
+module.exports = routes;

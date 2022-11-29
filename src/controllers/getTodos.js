@@ -2,18 +2,16 @@ const { Todo } = require('../db/index');
 
 const getAllTodos = async (req, res) => {
   try {
-    const filter = req.query.filter;
-    if (filter === 'all') {
-      const todos = await Todo.find();
-      res.json(todos);
-      return;
-    }
-    const flag = filter === 'completed';
-    const todos = await Todo.find({ completed: flag });
+      const filter = req.query.filter;
+      let findTodos = {};
+      if (filter !== 'all') {
+        findTodos = {completed: filter === 'completed'};
+      };
+    const todos = await Todo.find( findTodos );
     res.json(todos);
   } catch (err) {
-    res.sendStatus(500);
-  }
+    res.sendStatus(400);
+  };
 };
 
 module.exports = getAllTodos;

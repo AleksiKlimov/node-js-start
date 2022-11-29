@@ -10,13 +10,13 @@ app.use('/api/todos', cors(), routes);
 
 (async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/todosdb");
+    await mongoose.connect(config.mongoUrl);
     app.listen(config.port, () => {
-      console.log(`app listening on port ${config.port}`)
+      console.log(`app listening on port ${config.port}`);
     });
   } catch (err) {
     return console.log(err);
-  }
+  };
 })();
 
 

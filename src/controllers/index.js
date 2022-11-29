@@ -2,17 +2,17 @@
 const deleteCurrentTodo = require('./deleteCurrentTodo');
 const getAllTodos = require('./getTodos');
 const createTodoElement = require('./createTodo');
-const editTodo = require('./editTodo');
-const installAllTodoCompleted = require('./installAllCompleted')
+const updateTodo = require('./updateTodo');
+const changeAllTodosStatus = require('./changeAllTodosStatus')
 const deleteAllCompletedTodos = require('./deleteAllCompletedTodos');
 
 const controllers = {
   deleteCurrentTodo,
   getAllTodos,
   createTodoElement,
-  editTodo,
-  installAllTodoCompleted,
+  updateTodo,
+  changeAllTodosStatus,
   deleteAllCompletedTodos,
-}
+};
 
 module.exports = controllers;
