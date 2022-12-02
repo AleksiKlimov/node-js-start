@@ -2,22 +2,20 @@
   "name": "js-start",
   "version": "1.0.0",
   "scripts": {
-    "start": "start src/app.js",
-    "dev": "nodemon src/app.js"
+    "start": "node-js src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "devDependencies": {
-    "express": "^4.17.0",
-    "mongodb": "~4.12.0",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
+    "mongodb": "~4.12.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
-    "dotenv-defaults": "^5.0.2",
     "express": "^4.17.0",
     "mongoose": "^6.7.3"
   },
-  "main": "app.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AleksiKlimov/node-js-start.git"

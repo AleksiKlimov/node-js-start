@@ -1,20 +1,18 @@
 const fs = require('fs');
-const dotenv = require(`dotenv`);
+const dotenv = require('dotenv');
+dotenv.config()
+const defaultEnv = dotenv.parse(fs.readFileSync('.env'));
+const localEnv = dotenv.parse(fs.readFileSync('default.env'));
 
-
-
-const configDefault = dotenv.parse(fs.readFileSync('default.env'));
-const configLocal = dotenv.parse(fs.readFileSync('.env'));
-
-const mainConfig = {
-  ...configDefault,
-  ...configLocal,
+const joinedEnv = {
+  ...defaultEnv,
+  ...localEnv,
 };
 
 const config = {
-  port: mainConfig.PORT,
-  clientUrl: mainConfig.CLIENT_URL,
-  mongoUrl: mainConfig.MONGO_URL,
+  port: joinedEnv.PORT,
+  clientUrl: joinedEnv.CLIENT_URL,
+  mongoUrl: joinedEnv.MONGO_URL,
 };
 
 module.exports = config;

@@ -2,6 +2,7 @@ const { Todo } = require('../db/index');
 
 const createTodoElement = async (req, res) => {
   try {
+    console.log(req.body);
     const { todoTitle } = req.body;
     const todo = await Todo.create({ title: todoTitle, completed: false });
     await res.json(todo);
