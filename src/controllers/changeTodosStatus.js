@@ -1,4 +1,3 @@
-
 const { Todo } = require('../db');
 
 const changeAllTodosStatus = async (req, res) => {

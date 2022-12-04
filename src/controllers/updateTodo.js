@@ -4,7 +4,6 @@ const updateTodo = async (req, res) => {
   try {
     const _id = req.params.todoId;
     const { todoText, isCompleted } = req.body;
-    console.log(todoText, isCompleted);
     await Todo.updateOne({ _id }, { title: todoText, completed: isCompleted });
     return res.sendStatus(200)
   } catch (err) {
