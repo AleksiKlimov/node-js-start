@@ -3,11 +3,12 @@ const { Todo } = require('../db');
 
 const changeAllTodosStatus = async (req, res) => {
   try {
-    const { flag } = req.body.params;
-    await Todo.updateMany({}, { completed: flag});
+    const { value } = req.body;
+    await Todo.updateMany({}, { completed: value });
     res.sendStatus(200);
   } catch (err) {
-    res.sendStatus(404);
+    res.sendStatus(501);
+    throw err;
   };
 };
 

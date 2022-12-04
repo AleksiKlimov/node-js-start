@@ -11,6 +11,6 @@ app.use(cors({
   origin: config.clientUrl
 }))
 
-app.use('/api/todos', routes);
+app.use('/api', routes);
 
 module.exports = app;
