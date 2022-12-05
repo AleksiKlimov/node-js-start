@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: config.clientUrls
+  origin: config.clientUrl
 }))
 
 app.use('/api', routes);

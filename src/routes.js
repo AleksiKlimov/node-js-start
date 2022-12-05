@@ -2,15 +2,14 @@ const express = require('express');
 const controllers = require('./controllers');
 
 const routes = express.Router();
-const baseUrl = '/todos';
-routes.post(baseUrl, controllers.createTodoElement);
+routes.post('/todos', controllers.createTodoElement);
 
-routes.get(baseUrl, controllers.getTodos);
+routes.get('/todos', controllers.getTodos);
 
-routes.patch(`${baseUrl}/completed`, controllers.changeAllTodosStatus);
-routes.patch(`${baseUrl}/:todoId`, controllers.updateTodo);
+routes.patch('/todos/completed', controllers.changeAllTodosStatus);
+routes.patch('todos/:todoId', controllers.updateTodo);
 
-routes.delete(`${baseUrl}/all`, controllers.deleteAllCompletedTodos);
-routes.delete(`${baseUrl}/:todoId`, controllers.deleteCurrentTodo);
+routes.delete('todos/all', controllers.deleteAllCompletedTodos);
+routes.delete('todos/:todoId', controllers.deleteCurrentTodo);
 
 module.exports = routes;
